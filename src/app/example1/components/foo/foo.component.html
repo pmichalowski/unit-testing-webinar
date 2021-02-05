@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let character of characters$ | async">
+    Hello, {{getCharacterName(character)}}
+  </li>
+</ul>
