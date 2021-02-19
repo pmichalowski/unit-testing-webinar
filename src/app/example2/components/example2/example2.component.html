@@ -1,0 +1,4 @@
+<h1>Edit the list of episode locations:</h1>
+<ng-container *ngIf="locations$ | async as locations">
+  <app-location-form *ngFor="let location of locations" [location]="location"></app-location-form>
+</ng-container>

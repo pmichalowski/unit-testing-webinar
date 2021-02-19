@@ -1,0 +1,14 @@
+.example-link {
+  color: #fff;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #fff;
+  font-weight: lighter;
+  &:first-child {
+    border-left: none;
+  }
+  &.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

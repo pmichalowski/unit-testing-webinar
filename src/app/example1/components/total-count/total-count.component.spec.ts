@@ -2,7 +2,8 @@ import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core
 
 import { TotalCountComponent } from './total-count.component';
 import { CharactersService } from '../../services/characters.service';
-import { CharactersServiceStub } from '../../services/characters.service.stub';
+import { CHARACTER_STUB } from '../../services/characters.service.stub';
+import { of } from 'rxjs';
 
 describe('TotalCountComponent', () => {
   let component: TotalCountComponent;
@@ -28,10 +29,11 @@ describe('TotalCountComponent', () => {
   });
 
   it('should get the total count of characters', fakeAsync(() => {
-    spyOn(service, 'getCharacters').and.callThrough();
+    spyOn(service, 'getCharacters').and.returnValue(of([CHARACTER_STUB]));
     component.getCharactersAmount();
     tick();
     expect(service.getCharacters).toHaveBeenCalled();
     expect(component.characters.length).toBeGreaterThan(0);
+    expect(component.characters[0]).toEqual(CHARACTER_STUB);
   }));
 });
