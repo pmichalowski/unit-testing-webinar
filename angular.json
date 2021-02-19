@@ -94,7 +94,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "codeCoverageExclude": ["**/*.stub.ts"]
           }
         },
         "lint": {

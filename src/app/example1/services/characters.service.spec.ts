@@ -16,10 +16,6 @@ describe('CharactersService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should transform test to uppercase', () => {
-    expect(service.transformToUpperCase('beer')).toEqual('BEER');
-  });
-
   it('should get the characters list', done => {
     service.getCharacters().subscribe(characters => {
       expect(characters.length).toBeGreaterThan(0);

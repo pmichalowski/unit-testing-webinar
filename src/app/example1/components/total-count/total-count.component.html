@@ -1,0 +1,4 @@
+<p *ngIf="characters; else button">We have {{characters.length}} characters!</p>
+<ng-template #button>
+  <button (click)="getCharactersAmount()">Get the amount of characters!</button>
+</ng-template>
