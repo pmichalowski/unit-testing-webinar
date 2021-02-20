@@ -1,1 +1,4 @@
-<p>{{location?.name}}</p>
+<form [formGroup]="form" class="location-form">
+  <input data-selector="location-id-input" type="number" formControlName="id"/>
+  <input data-selector="location-name-input" type="text" formControlName="name"/>
+</form>
