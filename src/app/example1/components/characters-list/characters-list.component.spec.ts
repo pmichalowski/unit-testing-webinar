@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CharactersListComponent } from './characters-list.component';
 import { CharactersService } from '../../services/characters.service';
 import { Character } from '../../character';
+import { CharactersServiceStub } from '../../services/characters.service.stub';
 
 describe('CharactersListComponent', () => {
   let component: CharactersListComponent;
@@ -12,7 +13,7 @@ describe('CharactersListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CharactersListComponent],
-      providers: [CharactersService],
+      providers: [CharactersService], // this is bad
     }).compileComponents();
     service = TestBed.inject(CharactersService);
   }));

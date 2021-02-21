@@ -2,8 +2,9 @@ import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core
 
 import { TotalCountComponent } from './total-count.component';
 import { CharactersService } from '../../services/characters.service';
-import { CHARACTER_STUB } from '../../services/characters.service.stub';
+import { CHARACTER_STUB, CharactersServiceStub } from '../../services/characters.service.stub';
 import { of } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('TotalCountComponent', () => {
   let component: TotalCountComponent;
@@ -13,7 +14,7 @@ describe('TotalCountComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [TotalCountComponent],
-      providers: [CharactersService],
+      providers: [CharactersService], // this is bad
     }).compileComponents();
     service = TestBed.inject(CharactersService);
   }));
