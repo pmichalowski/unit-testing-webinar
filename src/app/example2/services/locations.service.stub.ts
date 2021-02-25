@@ -1,11 +1,7 @@
 import { LocationsService } from './locations.service';
 import { Observable, of } from 'rxjs';
 import { EpisodeLocation } from '../episode-location';
-
-export const EPISODE_LOCATION_STUB: EpisodeLocation = {
-  id: 432,
-  name: 'Final Space',
-};
+import { EPISODE_LOCATION_STUB } from '../episode-location.stub';
 
 export class LocationsServiceStub implements LocationsService {
   getLocations(): Observable<EpisodeLocation[]> {

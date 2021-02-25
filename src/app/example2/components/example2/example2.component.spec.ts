@@ -29,8 +29,9 @@ describe('Example2Component', () => {
     expect(component.locations$).toBeDefined();
   });
 
+  // an example to show you how to test if something is being rendered properly on the template
   it('should display the title', () => {
     const titleTag = fixture.debugElement.query(By.css('h1'));
-    expect(titleTag.nativeElement.innerHTML).toContain('episode locations');
+    expect(titleTag.nativeElement.innerHTML).toContain('Example');
   });
 });

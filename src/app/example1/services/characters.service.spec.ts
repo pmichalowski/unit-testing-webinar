@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { CharactersService } from './characters.service';
+import { CHARACTER_STUB } from '../character.stub';
 
 describe('CharactersService', () => {
   let service: CharactersService;
@@ -22,5 +23,10 @@ describe('CharactersService', () => {
       expect(characters[0].name).toEqual('Gary Goodspeed');
       done();
     });
+  });
+
+  it('should save character', () => {
+    service.saveCharacter(CHARACTER_STUB);
+    expect(service.savedCharacter).toEqual(CHARACTER_STUB);
   });
 });

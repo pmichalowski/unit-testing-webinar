@@ -18,4 +18,8 @@ export class CharactersListComponent {
   getCharacterName(character: Character): string {
     return character.name.toUpperCase();
   }
+
+  saveCharacter(character: Character): void {
+    this.characterService.saveCharacter(character);
+  }
 }

@@ -2,8 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LocationFormComponent } from './location-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EPISODE_LOCATION_STUB } from '../../services/locations.service.stub';
 import { By } from '@angular/platform-browser';
+import { EPISODE_LOCATION_STUB } from '../../episode-location.stub';
 
 describe('NameFormComponent', () => {
   let component: LocationFormComponent;
