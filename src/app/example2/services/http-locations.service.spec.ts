@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 
 import { HttpLocationsService } from './http-locations.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { EpisodeLocation } from '../episode-location';
 
 describe('HttpLocationsService', () => {
   let service: HttpLocationsService;
@@ -26,7 +25,7 @@ describe('HttpLocationsService', () => {
   });
 
   it('should get the locations list', done => {
-    const stubLocations: EpisodeLocation[] = [
+    const stubLocationsResponse = [
       { id: 1, name: 'Earth' },
       { id: 2, name: 'Mars' },
     ];
@@ -41,6 +40,6 @@ describe('HttpLocationsService', () => {
 
     const req = httpMock.expectOne('https://finalspaceapi.com/api/v0/location');
     expect(req.request.method).toBe('GET');
-    req.flush(stubLocations);
+    req.flush(stubLocationsResponse);
   });
 });

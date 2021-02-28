@@ -12,7 +12,7 @@ describe('NameFormComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [LocationFormComponent],
-      imports: [ReactiveFormsModule, ReactiveFormsModule],
+      imports: [ReactiveFormsModule],
     }).compileComponents();
   }));
 

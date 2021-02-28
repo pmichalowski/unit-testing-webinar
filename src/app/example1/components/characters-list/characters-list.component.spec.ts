@@ -43,14 +43,12 @@ describe('CharactersListComponent', () => {
   });
 
   it('should get the character name', () => {
-    // making a stub "on the fly"
     const stubCharacter: Character = { name: 'Tribore', id: 1, status: 'Alive' };
     expect(component.getCharacterName(stubCharacter)).toEqual('TRIBORE');
   });
 
   it('should save the character', () => {
     spyOn(service, 'saveCharacter');
-    // using a predefined stub
     component.saveCharacter(CHARACTER_STUB);
     expect(service.saveCharacter).toHaveBeenCalledWith(CHARACTER_STUB);
   });
